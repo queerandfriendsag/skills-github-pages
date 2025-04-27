@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Queer&Friends AG</title>
+    <title>Queer&Friends</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,7 +29,7 @@
             transform: translateX(-50%);
             padding: 20px;
             max-width: 80%;
-            background-color: rgba(0, 0, 0, 0.5); /* halbtransparenter Hintergrund */
+            background-color: rgba(0, 0, 0, 0.4);
             border-radius: 10px;
         }
         .top-text h2 {
@@ -67,17 +68,27 @@
             color: #0077cc;
             text-decoration: none;
         }
+
+        /* --- Hier kommt das Responsive-Design --- */
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+            }
+            .text-block, .image-block {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="top-image-container">
-        <img src="kex.png" style="width:700px;height:400px;">
+        <img src="kex.png" alt="Queer&Friends Einführung">
         <div class="top-text">
             <h2>Wir sind <a href="#">Queer&Friends</a></h2>
-            <p>eine bunte AG von Schüler*innen des Semper Gymnasiums,<br>
+            <p>– eine bunte AG von Schüler*innen des Semper Gymnasiums,<br>
             die sich einmal im Monat trifft, um über queere Themen zu sprechen, Kuchen und Kekse zu essen und einfach eine gute Zeit zu haben.<br><br>
-            Egal ob du schon viel über LGBTQAI+ weißt, selbst queer oder einfach neugierig bist, bei uns ist jede*r willkommen.<br><br>
+            Egal ob du schon viel über LGBTQAI+ weißt, selbst queer oder einfach neugierig bist – bei uns ist jede*r willkommen.<br><br>
             Wenn du Lust hast auf neue Perspektiven, interessante Gespräche und eine offene, freundliche Gruppe – komm vorbei!</p>
         </div>
     </div>
@@ -93,7 +104,7 @@
 
     <div class="section">
         <div class="image-block">
-            <img src="wand3.png" alt="Wandbild">
+            <img src="wand.png" alt="Wandbild">
         </div>
         <div class="text-block">
             <p>Unsere Leiterin Johanna sorgt bei jedem Treffen für neue spannende und wichtige Themen.</p>
