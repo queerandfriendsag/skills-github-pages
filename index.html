@@ -15,20 +15,23 @@
             text-align: center;
             color: white;
             margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .top-image-container img {
             width: 100%;
-            max-width: 900px;
             height: auto;
             border-radius: 8px;
+            display: block;
         }
         .top-text {
             position: absolute;
-            top: 10%;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             padding: 20px;
-            max-width: 80%;
+            width: 90%; /* Breiter gemacht */
             background-color: rgba(0, 0, 0, 0.4);
             border-radius: 10px;
         }
@@ -47,6 +50,9 @@
             align-items: center;
             gap: 40px;
             margin-bottom: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .text-block, .image-block {
             width: 300px;
@@ -69,13 +75,18 @@
             text-decoration: none;
         }
 
-        /* --- Hier kommt das Responsive-Design --- */
+        /* --- Responsive für Handys --- */
         @media (max-width: 768px) {
             .section {
                 flex-direction: column;
             }
             .text-block, .image-block {
                 width: 90%;
+            }
+            .top-text {
+                font-size: 16px;
+                padding: 15px;
+                width: 95%; /* noch breiter auf kleinen Bildschirmen */
             }
         }
     </style>
@@ -103,11 +114,12 @@
     </div>
 
     <div class="section">
-        <div class="image-block">
-            <img src="wand.png" alt="Wandbild">
-        </div>
+        <!-- Reihenfolge geändert: erst Text, dann Bild -->
         <div class="text-block">
             <p>Unsere Leiterin Johanna sorgt bei jedem Treffen für neue spannende und wichtige Themen.</p>
+        </div>
+        <div class="image-block">
+            <img src="wand.png" alt="Wandbild">
         </div>
     </div>
 
