@@ -9,12 +9,35 @@
             background-color: #f4f8fb;
             margin: 20px;
         }
-        .top-image img {
+        .top-image-container {
+            position: relative;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .top-image-container img {
             width: 100%;
             max-width: 900px;
-            display: block;
-            margin: 0 auto 30px auto;
+            height: auto;
             border-radius: 8px;
+        }
+        .top-text {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            max-width: 80%;
+            background-color: rgba(0, 0, 0, 0.4); /* halbtransparenter Hintergrund */
+            border-radius: 10px;
+        }
+        .top-text h2 {
+            margin-bottom: 10px;
+        }
+        .top-text a {
+            color: #ff8ac4;
+            font-weight: bold;
+            text-decoration: none;
         }
         .section {
             display: flex;
@@ -48,8 +71,15 @@
 </head>
 <body>
 
-    <div class="top-image">
+    <div class="top-image-container">
         <img src="kex.png" alt="Queer&Friends Einführung">
+        <div class="top-text">
+            <h2>Wir sind <a href="#">Queer&Friends</a></h2>
+            <p>– eine bunte AG von Schüler*innen des Semper Gymnasiums,<br>
+            die sich einmal im Monat trifft, um über queere Themen zu sprechen, Kuchen und Kekse zu essen und einfach eine gute Zeit zu haben.<br><br>
+            Egal ob du schon viel über LGBTQAI+ weißt, selbst queer oder einfach neugierig bist – bei uns ist jede*r willkommen.<br><br>
+            Wenn du Lust hast auf neue Perspektiven, interessante Gespräche und eine offene, freundliche Gruppe – komm vorbei!</p>
+        </div>
     </div>
 
     <div class="section">
