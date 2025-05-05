@@ -24,16 +24,16 @@
       border-radius: 0; /* kein Rand beim Top-Bild */
     }
     .top-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      width: 80%; /* angepasst, damit es nicht übersteht */
       background-color: rgba(0, 0, 0, 0.4);
       border-radius: 12px;
       text-align: center;
-    }
+      color: white;
+      padding: 20px;
+      width: 80%;
+      margin: -200px auto 40px; /* Negative Margin für große Bildschirme */
+      position: relative;
+      z-index: 2;
+   }
     .top-text h2 {
       margin-bottom: 10px;
       font-size: 28px;
@@ -77,13 +77,15 @@
       text-decoration: none;
     }
 
-    /* --- Responsive Anpassung für kleine Bildschirme --- */
-    @media (max-width: 768px) {
-      .top-text {
-        width: 90%;
-        font-size: 16px;
-        padding: 15px;
-      }
+
+@media (max-width: 768px) {
+  .top-text {
+    background-color: transparent; 
+    color: black; 
+    margin: 20px auto;
+    position: static; 
+  }
+}
       .section {
         flex-direction: column;
       }
@@ -95,17 +97,18 @@
 </head>
 <body>
 
-  <div class="top-image-container">
-    <img src="kex2.png" alt="Queer&Friends Einführung">
-    <div class="top-text">
-      <h2><a href="#">Queer&Friends</a></h2>
-      <p> Wir sind Queer&Friends <br>
+ <div class="top-image-container">
+  <img src="kex.png" alt="Queer&Friends Einführung">
+</div>
+
+<div class="top-text">
+  <p> Wir sind Queer&Friends <br>
       – eine bunte AG von Schüler*innen des Semper Gymnasiums,<br>
       die sich einmal im Monat trifft, um über queere Themen zu sprechen, Kuchen und Kekse zu essen und einfach eine gute Zeit zu haben.<br><br>
       Egal ob du schon viel über LGBTQAI+ weißt, selbst queer oder einfach neugierig bist – bei uns ist jede*r willkommen.<br>
       Wenn du Lust hast auf neue Perspektiven, interessante Gespräche und eine offene, freundliche Gruppe – komm vorbei!</p>
-    </div>
-  </div>
+
+</div>
 
   <div class="sections-wrapper">
     <div class="section">
